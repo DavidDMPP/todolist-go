@@ -128,7 +128,7 @@ func main() {
 
 	// delete /activities/:id
 	})
-	
+
     app.Delete("/activities/:id", func(c *fiber.Ctx) error {
         id := c.Params("id")
         _, err := db.Exec("DELETE FROM activities WHERE id=$1", id)
@@ -140,5 +140,5 @@ func main() {
 
 
 
-	app.Listen(":8081")
+	app.Listen(":8000")
 }
